@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Laboratorio 4: Fundamentos de JavaScript</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header id="header">Laboratorio 4: Fundamentos de JavaScript</header>
+	<section id="content_principal">
+		<article>
+			<div class="content">
+			<dl>
+				<caption><h1>Respuesta de las Preguntas</h1></caption>
+				<dt>
+					¿Qué diferencias y semejanzas hay entre Java y JavaScript? 
+				</dt>
+				<dd>
+					<br>Es importante mencionar desde un principio que ambos lenguajes son totalmente diferentes, sin embargo pueden llegar a tener un par de aspectos en común, pero estos son mínimos. En primer lugar, <strong>JavaScript</strong> es un lenguaje interpretado, miestras que <stron>Java</stron> es un lenguaje compilado; dicho esto, los posible errores cometidos al programar en <strong>JavaScript</strong> son detectados al ejecutar el programa, mientras que con <strong>Java</strong>, los errores se detectan en tiempo de compilación. Otra gran diferencia es que <strong>Java</strong> es un lenguaje orientado a objetos, mientras que <strong>JavaScript</strong> es un leguaje orientado a prototipos. <strong>Java</strong> es un lenguaje tipado (cada variable tiene u tipo de datso en específico, mienstras que <strong>JavaScript</strong> es un leguaje debilmente tipado. En conclusión, <strong>JavaScript</strong> no es lo mismo que que <strong>Java</strong>, ni algún subconjunto de él [1].<br><br>
+				</dd>
+				<dt>
+					¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)
+				</dt>
+				<dd>
+					<br>Es importate mencionar que el objeto Date soporta métodos UTC, aunado a método de horarios locales [2].
+					<ol>
+						<li value="1"><strong>Date.now( )</strong>: devuelve el valor numérico correspondiente a la hora actual [2].</li>
+						<li><strong>Date.parse( )</strong>: transforma una cadena que representa una fecha y devuelve el número de milisegundo desde las 00:00:00 del 1 de enero de 1970, hora local [2].</li>
+						<li><strong>Date.prototype.getDate( )</strong>: devuelve el días del mes para la fecha especificada de acuerdo con a hora local [2].</li>
+						<li><strong>Date.prototype.getTime( )</strong>: devuelve el valor numérico correspondiente a la hora para la fecha especificada según la hora universal [2].</li>
+						<li><strong>Date.prototype.setDate( )</strong>: establece el día del objeto en relación con el comienzo del mes establecido actualmente [2].</li> <br><br>
+					</ol>
+
+				</dd>
+				<dt>
+					¿Qué métodos tienen los arreglos? (Menciona al menos 5*)
+				</dt>
+				<dd>
+					<br>
+					<ol>
+						<li value="1"><strong>Array.from( )</strong>: crea una nueva instancia de Array a partir de un objeto iterable [3].</li>
+						<li><strong>Array.isArray( )</strong>: determina si el valor pasado com argumento es un Array [3].</li>
+						<li><strong>Array.of( )</strong>: crea una nueva instancia Array con el número variable de elementos pasado como argumentos, independiente del número o del tipo [3].</li>
+						<li><strong>Array.prototype.concat( )</strong>: se usa para unir dos o más Arrays. Este método no cambia los Arrays existentes, más bien devuelve un nuevo Array [3].</li> 
+						<li><strong>Array.prototypee.copyWithin( )</strong>: transfiere una copia plana de una sección a otra dentro del mismo Array, sin modificar su tamaño [3].</li><br><br>
+					</ol>
+
+				</dd>
+				<dt>
+					¿Cómo se declara una variable con alcance local dentro de una función?
+				</dt>
+				<dd>
+					<br>Las varibales declaradas dentro de una función son varaible locales, para ello, se utiliza la instrucción <strong>let</strong> (o <strong>var</strong>) la cual declara una variable de alcance local, de tal manera que solo puede ser manipulada o accedida a ella dentro de la función en la cual fue declarada [4]<br><br>.
+
+				</dd>
+				<dt>
+					¿Qué implicaciones tiene utilizar variables globales dentro de funciones?
+				</dt>
+				<dd>
+					<br>El hecho de hacer uso de alguna variable local dentro de una función en específico genera que se modifique el valor de la variable global definifa con anterioridad. Por otro lado, si la variable global se define dentro de la función en cuestión, la variable es global y puede ser accedida desde cualquier otra función.La finalidad última de las variables globales es compartid datos entre las funciones de manera sencilla; sin embargo, se recomienda definir las variables como locales para que sean de uso exclusivo de la función en la cual fueron declaradas.<br><br>
+				</dd>
+				<dt>
+					¿Qué método de String se puede utilizar para buscar patrones con expresiones regulares?¿Para qué podrías utilizar esto en una aplicación web?
+				</dt>
+				<dd>
+					<br>Algunos métodos que se pueden utilizar para buscar patrones regulares en Strings so: <strong>match</strong>, <strong>replace</strong>, <strong>search</strong> y <strong>split</strong>, pertenecientes del objeto <strong>String</strong>. Considero que su uso puede ser utilizado para sugerir que el usuario al momento de elegir alguna contraseña para un sitio, esta no sea algún patrón regular copuesto de caracteres simples o de expresiones muy comunes.<br><br>
+				</dd>
+			</dl>
+
+			</div>
+
+			<ul>
+				<caption><h1>Referencias</h1></caption>
+				<li>
+					[1] M. José. (s.f.). Java y JavaScript ¿son lo mismo? [Online]. Available: <a href="https://www.campusmvp.es/recursos/post/Java-y-JavaScript-son-lo-mismo.aspx" target="blank">https://www.campusmvp.es/recursos/post/Java-y-JavaScript-son-lo-mismo.aspx</a><br><br>
+				</li>
+				<li>
+					[2] Anónimo. (s.f.). Date. [Online]. Available: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Date" target="black">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Date</a><br><br>
+				</li>
+				<li>
+					[3] Anónimo. (s.f.). Array. [Online]. Available: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array" target="blank">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array</a><br><br>
+				</li>
+				<li>
+					[4] Anónimo. (s.f.) let. [Online]. Available: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/let" target="blank">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/let</a><br><br>
+				</li>
+				<li>
+					[5] Anónimo. (s.f.). Ámbito de las variable. [Online]. Available: <a href="https://uniwebsidad.com/libros/javascript/capitulo-4/ambito-de-las-variables?from=librosweb" target="blank">https://uniwebsidad.com/libros/javascript/capitulo-4/ambito-de-las-variables?from=librosweb</a><br><br>
+				</li>
+				<li>
+					[6] Anónimo. (s.f.). Expresiones Regulares. [Online]. Available: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions" target="blank">https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions</a><br><br>
+				</li>
+			</ul>
+
+		</article>
+	</section>
+	<footer id="footer">
+		<p><strong>Alumno: </strong>Ulises Almaguer Guzmán <strong>Matrícula: </strong>A01209070</p>
+	</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
