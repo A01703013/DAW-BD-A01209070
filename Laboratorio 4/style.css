@@ -52,7 +52,6 @@ p {
 	text-decoration: none;
 }
 
-
 #content_principal {
 	background: white;
 	width: 90%;
@@ -66,26 +65,44 @@ p {
 
 	}
 
-#content_principal header,
-#content_principal .tabla {
-		
-		border="2";
-		width="50%"; 
-		height="3000";
+	#content_principal header,
+	#content_principal .funciones_tarea {
+			padding: 50px 0 0 20px;
+			text-align: center
+	}
+	#content_principal header,
+	#content_principal .funciones_tarea p {
+			text-align: left
 	}
 
-#footer {
-	background: #333;
-	color: white;
-	text-align: center;
-	padding: 20px;
-	margin-top: 40px;
-}
+	.boton_funcion{
+    text-decoration: none;
+    width: 50%;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+  }
+  .boton_funcion:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+  }
 
-#footer p {
-	margin: 0;
-}
-	
-#footer a {
-	color: white;
-}
+	#footer {
+		background: #333;
+		color: white;
+		text-align: center;
+		padding: 20px;
+		margin-top: 40px;
+	}
+
+	#footer p {
+		margin: 0;
+	}
+		
+	#footer a {
+		color: white;
+	}
