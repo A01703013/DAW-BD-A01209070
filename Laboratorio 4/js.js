@@ -41,20 +41,10 @@ function pedirresultadosuma(){
 	let numero=prompt("Por favor ingresa el resultado al sumar "+a+"+"+b+": ");
 	let fin=performance.now();
 	if (numero==a+b) {
-		alert("El resultado de la suma es correcto. Usted tardo "+(fin-inicio)/1000+" segundos en contestar");
+		alert("El resultado de la suma es correcto. Usted tardo "+((fin-inicio)/1000).toFixed(3)+" segundos en contestar");
 	}else{
-		alert("El resultado de la suma es incorrecto. Usted tardo "+(fin-inicio)/1000+" segundos en contestar")
+		alert("El resultado de la suma es incorrecto. Usted tardo "+((fin-inicio)/1000).toFixed(3)+" segundos en contestar")
 	}
-}
-
-function pedirarreglo(){
-	let numero=parseInt(prompt("Por favor ingresa la cantidad de números en el arreglo."));
-	let arreglo=new Array (numero);
-	arreglo[0]=numero;
-	for (var i = 1; i <=numero; i++) {
-		arreglo[i]=parseFloat(prompt("Por favor ingresa el número de su eleción."));
-	}
-	return arreglo;
 }
 
 function countnumbers(){
@@ -64,7 +54,7 @@ function countnumbers(){
 
 function numerosnegativos(arreglo, numero){
 	let negativos=0, positivos=0, ceros=0;
-	for (var i = 1; i <numero; i++) {
+	for (var i = 1; i <=arreglo[0]; i++) {
 		if (arreglo[i]<0) {
 			negativos++;
 		}else if (arreglo[i]>0) {
@@ -80,27 +70,35 @@ function numerosnegativos(arreglo, numero){
 function pedirarreglodearreglos(){
 	let numero=parseFloat(prompt("Por favor ingresa la cantidad de arreglos en el arreglo."));
 	let arreglo=new Array (numero);
+	let promedio=new Array (numero);
 	for (var i = 0; i <numero; i++) {
 		arreglo[i]=pedirarreglo();
+		promedio[i]=promedioarreglo(arreglo[i]);
+
 	}
-	let argpromedio=promedioarreglos(arreglo,numero);
 	for (var i = 0; i <numero; i++) {
-		alert("El promedio del arreglo número "+(i+1)+" es "+argpromedio[i]+".");
+		alert("El promedio del arreglo número "+(i+1)+" es "+(promedio[i]).toFixed(2));
 	}
 }
 
-function promedioarreglos(arreglo,numero){
+function pedirarreglo(){
+	let numero=parseInt(prompt("Por favor ingresa la cantidad de números en el arreglo."));
+	let arreglo=new Array(numero);
+	arreglo[0]=numero;
+	for (var i = 1; i <=numero; i++) {
+		arreglo[i]=parseFloat(prompt("Por favor ingresa el número de su eleción."));
+	}
+	return arreglo;
+}
+
+function promedioarreglo(arreglo){
 	let aux=0;
 	let promedio=0;
-	let argpromedio=new Array(numero);
-	for (var i = 0; i<numero; i++) {
-		for (var j = 1; j <=arreglo[0]; i++) {
-			aux=aux+parseFloat(arreglo[i][j]);
-		}
-		promedio=aux/arreglo[0];
-		argpromedio[i]= parseFloat(promedio);
+	for (var j = 1; j <=arreglo[0]; j++) {
+		aux=aux+parseFloat(arreglo[j]);
 	}
-	return argpromedio;
+	promedio= parseFloat(aux)/parseFloat(arreglo[0]);
+	return promedio;
 }
 
 function invertirnumero(){
